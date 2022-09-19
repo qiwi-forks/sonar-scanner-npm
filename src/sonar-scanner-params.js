@@ -60,8 +60,7 @@ function defineSonarScannerParams(params, projectBaseDir, sqScannerParamsFromEnv
 }
 
 function extractInfoFromPackageFile(sonarScannerParams, projectBaseDir) {
-  const packageFile = path.join(projectBaseDir, 'package.json')
-  const pkg = readPackage(packageFile)
+  const pkg = readPackage({ cwd: projectBaseDir })
   log('Getting info from "package.json" file')
   function fileExistsInProjectSync(file) {
     return fs.existsSync(path.resolve(projectBaseDir, file))

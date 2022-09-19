@@ -125,12 +125,10 @@ function getSonarScannerExecutable(passExecutableCallback) {
       })
     })
     .catch(err => {
-      logError(`ERROR: impossible to download and extract binary: ${err.message}`)
-      logError(`       SonarScanner binaries probably don't exist for your OS (${targetOS}).`)
-      logError(
-        '       In such situation, the best solution is to install the standard SonarScanner (requires a JVM).'
-      )
-      logError('       Check it out at https://redirect.sonarsource.com/doc/install-configure-scanner.html')
+      logError(`ERROR: impossible to download and extract binary: ${err.message}
+    SonarScanner binaries probably don't exist for your OS (${targetOS}).
+    In such situation, the best solution is to install the standard SonarScanner (requires a JVM).
+    Check it out at https://redirect.sonarsource.com/doc/install-configure-scanner.html`)
     })
 }
 
