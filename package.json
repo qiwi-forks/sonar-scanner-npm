@@ -55,6 +55,7 @@
     "sonar-runner"
   ],
   "scripts": {
+    "build": "echo 'No build needed' && exit 0",
     "test": "npx nyc mocha",
     "ci": "npm run test && node ci-analysis.js"
   }

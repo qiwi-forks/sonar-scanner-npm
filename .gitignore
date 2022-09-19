@@ -135,3 +135,20 @@ xunit.xml
 # End of https://www.gitignore.io/api/node,SonarQube,intellij+all
 
 !specs/resources/**/*
+
+.npmrc
+
+# Creds
+*.asc`
+*.key
+*.pem
+*.cert
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
