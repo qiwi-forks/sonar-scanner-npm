@@ -1,3 +1,8 @@
+## [1.1.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.1.0...v1.1.1) (2022-09-19)
+
+### Fixes & improvements
+* perf: up read-pkg to v5.2.0, the latest non esm ([c064090](https://github.com/qiwi-forks/sonar-scanner-npm/commit/c0640900ba49bceb7c64cc8c4ce4b2eb0a6fa200))
+
 ## [1.1.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.0.0...v1.1.0) (2022-09-19)
 
 ### Fixes & improvements
