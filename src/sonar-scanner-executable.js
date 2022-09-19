@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
+const crypto = require('crypto')
 const exec = require('child_process').execSync
 const mkdirs = require('mkdirp').sync
 const extend = require('extend')
@@ -116,6 +117,9 @@ function getSonarScannerExecutable(passExecutableCallback) {
   })
   downloader.start()
     .then(() => {
+      checkHashsum(`${installFolder}/${fileName}`)
+    })
+    .then(() => {
       decompress(`${installFolder}/${fileName}`, installFolder).then(() => {
         passExecutableCallback(platformExecutable)
       })
@@ -188,4 +192,19 @@ function isMac() {
 
 function isLinux() {
   return /^linux/.test(process.platform)
+}
+
+// https://binaries.sonarsource.com/?prefix=Distribution/sonar-scanner-cli/
+function checkHashsum(filePath) {
+  const fileName = path.basename(filePath)
+  const fileBuffer = fs.readFileSync(filePath)
+  const expectedHash = fs.readFileSync(path.resolve(__dirname, '../hashes', `${fileName}.sha256`), 'utf8').trim()
+  const hashSum = crypto.createHash('sha256')
+  hashSum.update(fileBuffer)
+
+  const hex = hashSum.digest('hex')
+
+  if (hex !== expectedHash) {
+    throw Error(`Hashsum of downloaded file is not correct. Expected ${expectedHash}, got ${hex}`)
+  }
 }

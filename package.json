@@ -19,6 +19,12 @@
   "bin": {
     "sonar-scanner": "./src/bin/sonar-scanner"
   },
+  "files": [
+    "src",
+    "hashes",
+    "LICENSE",
+    "README.md"
+  ],
   "engines": {
     "node": ">= 16"
   },

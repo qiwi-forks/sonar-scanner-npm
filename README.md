@@ -2,14 +2,16 @@
 
 > The fork of [the fork (dvolpato/sonar-scanner-npm)](https://github.com/dvolpato/sonar-scanner-npm) of the original [SonarQube Scanner for NPM](https://github.com/bellingard/sonar-scanner-npm) to bring a bit more security for the _enterprise_ usage.
 
-## Installation
+## Extras
+* Check bin hashes
+* Fixed some vuls / updated deps
 
+## Installation
 ``` sh
 npm install -D @qiwi/sonarqube-scanner
 ```
 
 ## Usage
-
 ```js
 const scanner = require('sonarqube-scanner');
 scanner(
