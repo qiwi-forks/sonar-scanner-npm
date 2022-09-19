@@ -29,11 +29,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Restore artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact-${{ github.run_id }}
-
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -69,11 +64,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Restore artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact-${{ github.run_id }}
-
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -98,11 +88,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-
-      - name: Restore artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact-${{ github.run_id }}
 
       - uses: actions/setup-node@v3
         with:
