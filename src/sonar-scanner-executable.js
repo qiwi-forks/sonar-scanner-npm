@@ -205,4 +205,6 @@ function checkHashsum(filePath) {
   if (hex !== expectedHash) {
     throw Error(`Hashsum of downloaded file is not correct. Expected ${expectedHash}, got ${hex}`)
   }
+
+  log('Checksum of downloaded file is correct.')
 }
