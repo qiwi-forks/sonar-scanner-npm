@@ -1,7 +1,7 @@
 {
   "name": "@qiwi/sonarqube-scanner",
   "description": "SonarQube/SonarCloud Scanner for the JavaScript world / QIWI fork to bring a bit more security",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/qiwi-forks/sonar-scanner-npm",
   "author": {
     "name": "Fabrice Bellingard",
