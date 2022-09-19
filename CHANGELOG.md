@@ -1,3 +1,8 @@
+## [1.2.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.2.0...v1.2.1) (2022-09-19)
+
+### Fixes & improvements
+* docs: minor edits ([44374aa](https://github.com/qiwi-forks/sonar-scanner-npm/commit/44374aa34225156c7b6399a631a909204a9d2725))
+
 ## [1.2.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.1.2...v1.2.0) (2022-09-19)
 
 ### Features
