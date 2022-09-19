@@ -1,3 +1,8 @@
+## [1.2.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.1.2...v1.2.0) (2022-09-19)
+
+### Features
+* feat: log successful hashsum check ([dafc220](https://github.com/qiwi-forks/sonar-scanner-npm/commit/dafc22086f40a73309e01f4e574ae8bd4c99bb3f))
+
 ## [1.1.2](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.1.1...v1.1.2) (2022-09-19)
 
 ### Fixes & improvements
