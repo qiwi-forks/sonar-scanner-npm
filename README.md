@@ -1,6 +1,6 @@
 # @qiwi/sonarqube-scanner
 
-> The fork of [the fork (dvolpato/sonar-scanner-npm)](https://github.com/dvolpato/sonar-scanner-npm) of the original [SonarQube Scanner for NPM](https://github.com/bellingard/sonar-scanner-npm) to bring a bit more security for the _enterprise_ usage.
+> The fork of [the fork (dvolpato/sonar-scanner-npm)](https://github.com/dvolpato/sonar-scanner-npm) of the original [SonarQube Scanner for NPM](https://github.com/bellingard/sonar-scanner-npm) to bring a bit more security for _enterprise_ use.
 
 ## Extras
 * Check bin hashes
