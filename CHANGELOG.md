@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.3.0...v1.3.1) (2022-11-19)
+
+### Fixes & improvements
+* perf: update fancy-log to v2 ([1bce4cc](https://github.com/qiwi-forks/sonar-scanner-npm/commit/1bce4cc34f0c18cc807b7b5a68ee61280b4e7b88))
+* fix: set bugs url as sonar.links.issue ([80d6e90](https://github.com/qiwi-forks/sonar-scanner-npm/commit/80d6e90e94f93024016bd597c7f2b1228a57da0d))
+
 ## [1.3.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.2.1...v1.3.0) (2022-11-19)
 
 ### Features
