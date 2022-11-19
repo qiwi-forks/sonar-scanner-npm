@@ -1,3 +1,8 @@
+## [1.3.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.2.1...v1.3.0) (2022-11-19)
+
+### Features
+* feat: invoke internal client asynchonously ([f137f74](https://github.com/qiwi-forks/sonar-scanner-npm/commit/f137f74b025df429dfc6d2a61cce0228b212b511))
+
 ## [1.2.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.2.0...v1.2.1) (2022-09-19)
 
 ### Fixes & improvements
