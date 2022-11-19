@@ -1,4 +1,4 @@
-const exec = require('child_process').execFileSync
+const exec = require('child_process').execFile
 const log = require('fancy-log')
 const prepareExecEnvironment = require('./sonar-scanner-executable').prepareExecEnvironment
 const scannerExecutable = require('./sonar-scanner-executable').getSonarScannerExecutable
@@ -28,11 +28,12 @@ function scanCLI(cliArgs, params, callback) {
   const optionsExec = prepareExecEnvironment(params, process)
 
   // determine the command to run and execute it
-  scannerExecutable(sqScannerCommand => {
+  scannerExecutable((sqScannerCommand) => {
     try {
-      exec(sqScannerCommand, fromParam().concat(cliArgs), optionsExec)
-      log('Analysis finished.')
-      callback()
+      exec(sqScannerCommand, fromParam().concat(cliArgs), optionsExec, () => {
+        log('Analysis finished.')
+        callback()
+      })
     } catch (error) {
       process.exit(error.status)
     }
@@ -49,11 +50,12 @@ function scanUsingCustomScanner(params, callback) {
   const optionsExec = prepareExecEnvironment(params, process)
 
   // determine the command to run and execute it
-  localscannerExecutable(sqScannerCommand => {
+  localscannerExecutable((sqScannerCommand) => {
     try {
-      exec(sqScannerCommand, fromParam(), optionsExec)
-      log('Analysis finished.')
-      callback()
+      exec(sqScannerCommand, fromParam(), optionsExec, () => {
+        log('Analysis finished.')
+        callback()
+      })
     } catch (error) {
       process.exit(error.status)
     }
