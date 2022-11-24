@@ -1,3 +1,11 @@
+## [1.4.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.3.1...v1.4.0) (2022-11-24)
+
+### Features
+* feat: pass error to cp.exec callback ([e9e5063](https://github.com/qiwi-forks/sonar-scanner-npm/commit/e9e506360ebcfff56a45d72bdbac30b1f18de120))
+
+### Fixes & improvements
+* fix: rollback fancy-log ([b8716ab](https://github.com/qiwi-forks/sonar-scanner-npm/commit/b8716ab56527feb1243308cc515e0e910ecd223e))
+
 ## [1.3.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.3.0...v1.3.1) (2022-11-19)
 
 ### Fixes & improvements
