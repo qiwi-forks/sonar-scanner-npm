@@ -2,7 +2,7 @@
   "name": "@qiwi/sonarqube-scanner",
   "alias": "@qiwi/sonar-scanner",
   "description": "SonarQube/SonarCloud Scanner for the JavaScript world / QIWI fork to bring a bit more security",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "publishConfig": {
     "access": "public"
   },

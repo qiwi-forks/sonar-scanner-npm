@@ -1,3 +1,8 @@
+## [1.4.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.4.0...v1.4.1) (2022-11-24)
+
+### Fixes & improvements
+* fix: pass err to exec callback ([1d2d97b](https://github.com/qiwi-forks/sonar-scanner-npm/commit/1d2d97bae555b6f794362f231a099e6747448118))
+
 ## [1.4.0](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.3.1...v1.4.0) (2022-11-24)
 
 ### Features
