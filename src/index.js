@@ -30,11 +30,12 @@ function scanCLI(cliArgs, params, callback) {
   // determine the command to run and execute it
   scannerExecutable((sqScannerCommand) => {
     try {
-      exec(sqScannerCommand, fromParam().concat(cliArgs), optionsExec, () => {
+      exec(sqScannerCommand, fromParam().concat(cliArgs), optionsExec, (err, stdout, stderr) => {
         log('Analysis finished.')
-        callback()
+        callback(err, stdout, stderr)
       })
     } catch (error) {
+      callback(error)
       process.exit(error.status)
     }
   })
