@@ -1,3 +1,8 @@
+## [1.4.2](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.4.1...v1.4.2) (2022-11-24)
+
+### Fixes & improvements
+* perf: up deps ([ae5cc1f](https://github.com/qiwi-forks/sonar-scanner-npm/commit/ae5cc1f492d10acc52a2ed9fdcc17276a50b8df0))
+
 ## [1.4.1](https://github.com/qiwi-forks/sonar-scanner-npm/compare/v1.4.0...v1.4.1) (2022-11-24)
 
 ### Fixes & improvements
