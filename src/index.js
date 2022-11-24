@@ -1,5 +1,6 @@
 const exec = require('child_process').execFile
 const log = require('fancy-log')
+const process = require('process')
 const prepareExecEnvironment = require('./sonar-scanner-executable').prepareExecEnvironment
 const scannerExecutable = require('./sonar-scanner-executable').getSonarScannerExecutable
 const localscannerExecutable = require('./sonar-scanner-executable').getLocalSonarScannerExecutable
@@ -21,7 +22,7 @@ function scan(params, callback) {
 /*
  * Function used by the '/bin/sonar-scanner' executable that accepts command line arguments.
  */
-function scanCLI(cliArgs, params, callback) {
+function scanCLI(cliArgs, params, callback = () => {}) {
   log('Starting analysis...')
 
   // prepare the exec options, most notably with the SQ params
@@ -53,11 +54,12 @@ function scanUsingCustomScanner(params, callback) {
   // determine the command to run and execute it
   localscannerExecutable((sqScannerCommand) => {
     try {
-      exec(sqScannerCommand, fromParam(), optionsExec, () => {
+      exec(sqScannerCommand, fromParam(), optionsExec, (err, stdout, stderr) => {
         log('Analysis finished.')
-        callback()
+        callback(err, stdout, stderr)
       })
     } catch (error) {
+      callback(error)
       process.exit(error.status)
     }
   })
