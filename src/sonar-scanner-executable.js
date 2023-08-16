@@ -149,7 +149,6 @@ function getLocalSonarScannerExecutable(passExecutableCallback) {
     // TODO: we should check that it's at least v2.8+
     log('Local install of Sonarscanner found. Using it.')
     passExecutableCallback(command)
-    return
   } catch (e) {
     // sonar-scanner is not in the PATH
     throw Error('Local install of SonarScanner not found.')
